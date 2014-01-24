@@ -554,7 +554,8 @@ api.wrap = (user, main=true) ->
 
         message = ''
         evolve = ->
-          userPets[pet] = 0
+          userPets[pet] = -1
+          # changed to -1 to mark "owned" pets
           user.items.mounts[pet] = true
           user.items.currentPet = "" if pet is user.items.currentPet
           message = "You have tamed #{egg}, let's go for a ride!"
