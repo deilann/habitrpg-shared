@@ -30,5 +30,14 @@
     "useGems": "If you've got your eye on a pet, but can't wait any longer for it to drop, use Gems in <strong>Options > Inventory</strong> to buy one!",
     "hatchAPot": "Hatch a <%= potion %> <%= egg %>?",
     "feedPet": "Feed <%= article %><%= text %> to your <%= name %>?",
-    "useSaddle": "Saddle <%= pet %>?"
+    "useSaddle": "Saddle <%= pet %>?",
+    "releasePetsPop": "Free all of your basic pets, so you can once again attempt Beastmaster!",
+    "releasePetsName": "Release Pets",
+    "releasePetsTitle": "Release Pets: Beastmaster Again!",
+    "releasePetsBlurb": "Now that you've found all the pets, what are you going to do with your drops? Why not start all over?",
+    "releasePets1": "By releasing all of your pets, drops will continue to be motivating.",
+    "releasePets2": "Consider combining this with an Orb of Rebirth for the best effect!",
+    "releasePets3": "Don't worry-- all your rare and quest pets will stay safely in your stable.",
+    "releasePetsEarnAchievement": "When you earn Beastmaster again, it will be noted in your achievements!",
+    "releasePetsButton": "Roam Free!"
 }

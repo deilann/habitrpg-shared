@@ -477,6 +477,10 @@ api.wrap = (user, main=true) ->
         cb? null, user
         ga?.event('purchase', 'Rebirth').send()
 
+      release: (req, cb) ->
+        return cb? {code:401,message: "Ding."}
+        cb? null, user
+
       allocateNow: (req, cb) ->
         _.times user.stats.points, user.fns.autoAllocate
         user.stats.points = 0
@@ -680,6 +684,10 @@ api.wrap = (user, main=true) ->
         user.markModified? 'purchased'
         cb? null, _.pick(user,$w 'purchased preferences')
         ga?.event('purchase', path).send()
+
+      release: (req, cb, ga) ->
+       user.balance -= 2
+       cb? null
 
       # ------
       # Classes
