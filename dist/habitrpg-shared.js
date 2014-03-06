@@ -11911,6 +11911,13 @@ var process=require("__browserify_process");(function() {
           }
           return ga != null ? ga.event('purchase', 'Rebirth').send() : void 0;
         },
+        release: function(req, cb) {
+          return typeof cb === "function" ? cb({
+            code: 401,
+            message: "Ding."
+          }) : void 0;
+          return typeof cb === "function" ? cb(null, user) : void 0;
+        },
         allocateNow: function(req, cb) {
           _.times(user.stats.points, user.fns.autoAllocate);
           user.stats.points = 0;
@@ -12295,6 +12302,10 @@ var process=require("__browserify_process");(function() {
             cb(null, _.pick(user, $w('purchased preferences')));
           }
           return ga != null ? ga.event('purchase', path).send() : void 0;
+        },
+        release: function(req, cb, ga) {
+          user.balance -= 2;
+          return typeof cb === "function" ? cb(null) : void 0;
         },
         changeClass: function(req, cb, ga) {
           var klass, _ref;
